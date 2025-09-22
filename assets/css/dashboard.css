@@ -1,0 +1,176 @@
+/* Dashboard Specific Styles */
+
+/* Layout: Chatroom left, dashboard centered */
+.page-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 1800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 80vh;
+    justify-content: flex-start;
+}
+
+.chatroom-section {
+    width: 300px;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30;
+    margin-right: 40px;
+}
+
+.chatroom-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.chatroom-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #f9f9f9;
+    padding: 10px;
+}
+
+.chat-message {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ececec;
+}
+
+.chat-sender {
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-time {
+    font-size: 12px;
+    color: #888;
+    margin-left: 8px;
+}
+
+.chat-text {
+    margin-top: 3px;
+    color: #444;
+}
+
+.chatroom-form {
+    display: flex;
+    gap: 8px;
+}
+
+.chatroom-form input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.chatroom-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.chatroom-form button:hover {
+    background: #0056b3;
+}
+
+.welcome-section {
+    width: 900px;
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.movies-section {
+    width: 900px;
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.movie-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.movie-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Dashboard */
+@media (min-width: 1101px) {
+    .page-layout {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .page-layout {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    .chatroom-section,
+    .welcome-section,
+    .movies-section {
+        width: 100%;
+        max-width: 900px;
+        margin-right: 0;
+    }
+    
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
